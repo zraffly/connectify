@@ -397,3 +397,255 @@
   color: #fff;
   transform: none;
 }
+
+/* Stable viewport, scrolling and control geometry. */
+html:has(body > .app),
+body:has(> .app) {
+  height: 100%;
+  overflow: hidden;
+}
+.app {
+  min-height: 0;
+  height: 100dvh;
+  grid-template-rows: minmax(0, 1fr);
+}
+.main,
+.conversation-layout,
+.thread-panel,
+.sidebar,
+.settings,
+.settings-form {
+  min-width: 0;
+  min-height: 0;
+}
+.sidebar,
+.page-header,
+.composer,
+.thread-header {
+  flex-shrink: 0;
+}
+.messages,
+.page-body,
+.thread-body,
+.side-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+}
+.messages,
+.thread-body {
+  min-height: 0;
+}
+.settings {
+  align-items: start;
+}
+.settings-nav {
+  min-height: 0;
+}
+.settings-nav button,
+.tab {
+  font-weight: 600;
+}
+.side-link[href^="dm.html"] > span:last-child,
+.side-user > span:not(.avatar) {
+  min-width: 0;
+}
+.side-link[href^="dm.html"] > span:last-child,
+.side-user strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page-header > div:not(.header-actions):not(.header-tile) {
+  min-width: 0;
+}
+.page-header h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header-actions,
+.header-tile,
+.burger {
+  flex-shrink: 0;
+}
+.composer {
+  flex: 0 0 auto;
+}
+.composer textarea {
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.mention-list {
+  max-height: min(240px, 32dvh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.context-menu {
+  max-width: calc(100vw - 16px);
+  max-height: calc(100dvh - 16px);
+  overflow-y: auto;
+}
+.thread-panel .message-meta,
+.thread-panel .message-meta strong {
+  min-width: 0;
+}
+.thread-panel .message-meta strong {
+  overflow-wrap: anywhere;
+}
+.thread-panel .message-meta time {
+  flex-shrink: 0;
+}
+/* Keep the card and submit control in place when an error appears. */
+.auth-card [data-auth-error] {
+  min-height: 54px;
+  padding: 8px 10px;
+  line-height: 18px;
+}
+
+html:not(:has(body > .app)) {
+  scrollbar-gutter: stable;
+}
+.thread-body blockquote {
+  margin: 0 0 20px;
+  padding-left: 12px;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  .message.grouped {
+    margin-top: 0;
+    padding-bottom: 28px;
+    margin-bottom: 12px;
+  }
+}
+.auth-card [data-auth-error][hidden] {
+  display: block !important;
+  visibility: hidden;
+}
+.auth-card .form-stack {
+  gap: 12px;
+}
+.auth-card .lead {
+  margin-bottom: 20px;
+}
+.auth-card .auth-links {
+  margin-top: 14px;
+}
+.auth-card .demo-help {
+  margin-top: 14px;
+}
+body[data-version="1"] .auth-page {
+  padding: 0;
+  gap: 0;
+}
+body[data-version="1"] .auth-left {
+  margin: 0;
+  min-height: 0;
+  padding: 26px 40px;
+  gap: 16px;
+}
+body[data-version="1"] .auth-right {
+  margin: 26px;
+}
+body[data-version="1"] .auth-card h1 {
+  font-size: 32px;
+}
+body[data-version="2"] .auth-card {
+  padding: 24px 30px;
+}
+.onboarding-page {
+  gap: 20px;
+}
+.onboarding-card {
+  flex-shrink: 0;
+}
+@media (max-height: 800px) and (min-width: 768px) {
+  .auth-footer {
+    display: none;
+  }
+  body[data-version="1"] .auth-left {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .auth-right {
+    padding: 24px 32px;
+  }
+  .auth-art {
+    min-height: 220px;
+    max-height: 360px;
+  }
+  .orbit-image {
+    scale: 0.75;
+  }
+  .auth-right:after {
+    margin-top: 30px;
+  }
+  .onboarding-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .onboarding-card {
+    padding: 24px 32px;
+  }
+  .stepper {
+    margin: 10px 0 24px;
+  }
+  .workspace-choices {
+    margin: 20px 0;
+  }
+  .onboarding-actions {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  body[data-version="1"] .auth-page {
+    padding: 26px;
+  }
+  body[data-version="1"] .auth-left {
+    min-height: calc(100dvh - 52px);
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  body[data-version="1"] .auth-page {
+    padding: 24px 16px;
+  }
+  body[data-version="1"] .auth-left {
+    min-height: calc(100dvh - 48px);
+    padding: 0;
+  }
+  body[data-version="1"] .auth-card {
+    margin: 32px auto;
+  }
+  body[data-version="1"] .auth-card h1 {
+    font-size: 27px;
+  }
+  body[data-version="2"] .auth-card {
+    padding: 24px 20px;
+  }
+  .settings-nav {
+    flex: none;
+  }
+  .onboarding-page {
+    gap: 28px;
+  }
+}
+
+/* A closed tablet drawer must be absent from hit testing and keyboard navigation. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .app:not(.menu-open) .sidebar {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .app.menu-open .sidebar {
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

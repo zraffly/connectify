@@ -36,7 +36,7 @@
   const channel = query.get("channel") || body.dataset.defaultChannel;
   const personIndex = Math.max(
     0,
-    Math.min(3, Number(query.get("person")) || 0),
+    Math.min(3, Math.trunc(Number(query.get("person")) || 0)),
   );
   const conversationKey =
     page === "dm" ? `dm-${personIndex}` : `channel-${channel}`;
@@ -104,7 +104,7 @@
     target.textContent = text;
     target.hidden = false;
     fields.forEach((input) => input.setAttribute("aria-invalid", "true"));
-    fields[0]?.focus();
+    fields[0]?.focus({ preventScroll: true });
   }
   function clearErrors(form) {
     $$("[aria-invalid]", form).forEach((input) =>
@@ -165,17 +165,78 @@
     b.addEventListener("click", () => setTheme(b.dataset.themeChoice)),
   );
 
+  // A single fixed tooltip never changes the size of any scroll container.
+  const tooltip = document.createElement("div");
+  tooltip.className = "ui-tooltip";
+  tooltip.id = "ui-tooltip";
+  tooltip.setAttribute("role", "tooltip");
+  tooltip.hidden = true;
+  document.body.append(tooltip);
+  let tooltipOwner = null;
+  function hideTooltip() {
+    tooltipOwner?.removeAttribute("aria-describedby");
+    tooltipOwner = null;
+    tooltip.hidden = true;
+  }
+  function showTooltip(owner) {
+    if (!owner || !owner.getClientRects().length) return;
+    hideTooltip();
+    tooltipOwner = owner;
+    tooltip.textContent = owner.dataset.tooltip;
+    tooltip.hidden = false;
+    const rect = owner.getBoundingClientRect();
+    const width = tooltip.offsetWidth;
+    const height = tooltip.offsetHeight;
+    tooltip.style.left = `${Math.max(8, Math.min(rect.left + rect.width / 2 - width / 2, innerWidth - width - 8))}px`;
+    const top =
+      rect.top >= height + 12 ? rect.top - height - 8 : rect.bottom + 8;
+    tooltip.style.top = `${Math.max(8, Math.min(top, innerHeight - height - 8))}px`;
+    owner.setAttribute("aria-describedby", tooltip.id);
+  }
+  document.addEventListener("pointerover", (event) => {
+    if (event.pointerType !== "mouse") return;
+    const owner = event.target.closest("[data-tooltip]");
+    if (owner !== tooltipOwner) owner ? showTooltip(owner) : hideTooltip();
+  });
+  document.addEventListener("pointerout", (event) => {
+    if (tooltipOwner && !tooltipOwner.contains(event.relatedTarget))
+      hideTooltip();
+  });
+  document.addEventListener("focusin", (event) => {
+    const owner = event.target.closest("[data-tooltip]");
+    if (owner?.matches(":focus-visible")) showTooltip(owner);
+  });
+  document.addEventListener("focusout", hideTooltip);
+  document.addEventListener("pointerdown", hideTooltip);
+  document.addEventListener("scroll", hideTooltip, true);
+  window.addEventListener("resize", hideTooltip);
+
   let lastMenuFocus;
+  function syncSidebar() {
+    const sidebar = $("#sidebar");
+    if (!sidebar) return;
+    const closed =
+      !matchMedia("(min-width: 1280px)").matches &&
+      !$(".app").classList.contains("menu-open");
+    sidebar.inert = closed;
+    sidebar.setAttribute("aria-hidden", String(closed));
+  }
+  syncSidebar();
   function closeMenu() {
-    $(".app")?.classList.remove("menu-open");
+    const app = $(".app");
+    if (!app?.classList.contains("menu-open")) return;
+    app.classList.remove("menu-open");
+    syncSidebar();
     $("[data-menu-open]")?.setAttribute("aria-expanded", "false");
-    lastMenuFocus?.focus();
+    if (lastMenuFocus?.getClientRects().length)
+      lastMenuFocus.focus({ preventScroll: true });
   }
   $("[data-menu-open]")?.addEventListener("click", (event) => {
     lastMenuFocus = event.currentTarget;
     $(".app").classList.add("menu-open");
+    syncSidebar();
     lastMenuFocus.setAttribute("aria-expanded", "true");
-    $("[data-menu-close]", $("#sidebar"))?.focus();
+    $("[data-menu-close]", $("#sidebar"))?.focus({ preventScroll: true });
   });
   $$("[data-menu-close]").forEach((b) =>
     b.addEventListener("click", closeMenu),
@@ -183,6 +244,7 @@
   const desktop = matchMedia("(min-width: 1280px)");
   desktop.addEventListener("change", () => {
     if (desktop.matches) closeMenu();
+    syncSidebar();
   });
   document.addEventListener("keydown", (event) => {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
@@ -202,10 +264,10 @@
       );
       if (event.shiftKey && document.activeElement === items[0]) {
         event.preventDefault();
-        items.at(-1)?.focus();
+        items.at(-1)?.focus({ preventScroll: true });
       } else if (!event.shiftKey && document.activeElement === items.at(-1)) {
         event.preventDefault();
-        items[0]?.focus();
+        items[0]?.focus({ preventScroll: true });
       }
     }
   });
@@ -572,8 +634,25 @@
       $$("[data-channel]").forEach((a) =>
         a.classList.toggle("active", a.dataset.channel === channel),
       );
-    } else if (page === "dm")
+    } else if (page === "dm") {
       $("[data-page-title]").textContent = contacts[personIndex];
+      document.title = `${contacts[personIndex]} | Connectify`;
+      $$('#sidebar .side-link[href^="dm.html?person="]').forEach((link) => {
+        const selected =
+          Number(new URL(link.href).searchParams.get("person")) === personIndex;
+        link.classList.toggle("active", selected);
+        if (selected) {
+          link.setAttribute("aria-current", "page");
+          const avatar = $(".avatar", link).cloneNode(true);
+          avatar.classList.replace("avatar-28", "avatar-36");
+          $(".header-tile").replaceChildren(avatar);
+          const status =
+            $(".status", avatar)?.getAttribute("aria-label") || "online";
+          $("[data-page-subtitle]").textContent =
+            statusLabels[status] || "Не в сети";
+        } else link.removeAttribute("aria-current");
+      });
+    }
     const input = $("[data-composer=main] textarea");
     input.placeholder =
       page === "dm"
@@ -602,11 +681,11 @@
       "Обсуждение сообщения";
     threadRecords.forEach((record) => appendMessage(record, root, true));
     panel.hidden = false;
-    $("[data-composer=thread] textarea").focus();
+    $("[data-composer=thread] textarea").focus({ preventScroll: true });
   }
   function closeThread() {
     if ($("#thread")) $("#thread").hidden = true;
-    threadFocus?.focus();
+    threadFocus?.focus({ preventScroll: true });
   }
   $("[data-thread-close]")?.addEventListener("click", closeThread);
 
@@ -650,7 +729,7 @@
     const rect = button.getBoundingClientRect();
     contextMenu.style.left = `${Math.max(8, Math.min(rect.right - 220, innerWidth - 228))}px`;
     contextMenu.style.top = `${Math.max(8, Math.min(rect.bottom + 4, innerHeight - contextMenu.offsetHeight - 12))}px`;
-    $("button", contextMenu).focus();
+    $("button", contextMenu).focus({ preventScroll: true });
   }
   document.addEventListener("click", (event) => {
     const reaction = event.target.closest("[data-reaction]");
@@ -694,7 +773,7 @@
           contextMessage.dataset.threadReply ? threadRecords : customMessages
         ).find((m) => m.id === contextMessage.dataset.customId);
         $("textarea", form).value = record?.text || text;
-        $("textarea", form).focus();
+        $("textarea", form).focus({ preventScroll: true });
         toast("Измените текст и отправьте сообщение");
       }
       if (action.dataset.contextAction === "delete") {
@@ -744,7 +823,7 @@
       const after = input.value.slice(input.selectionEnd);
       const next = before.replace(/@[^\s@]*$/u, `@${name} `);
       input.value = next + after;
-      input.focus();
+      input.focus({ preventScroll: true });
       input.setSelectionRange(next.length, next.length);
       list.hidden = true;
     }
@@ -765,7 +844,12 @@
         options.forEach((b, i) =>
           b.setAttribute("aria-selected", String(i === mentionIndex)),
         );
-        options[mentionIndex].scrollIntoView({ block: "nearest" });
+        // Scroll only the mention list; scrollIntoView also moves the chat/document.
+        const option = options[mentionIndex];
+        const top = option.offsetTop;
+        if (top < list.scrollTop) list.scrollTop = top;
+        else if (top + option.offsetHeight > list.scrollTop + list.clientHeight)
+          list.scrollTop = top + option.offsetHeight - list.clientHeight;
         return;
       }
       if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
@@ -775,7 +859,7 @@
     });
     function insertText(text) {
       input.setRangeText(text, input.selectionStart, input.selectionEnd, "end");
-      input.focus();
+      input.focus({ preventScroll: true });
       updateMentions();
     }
     $("[data-mention]", form).addEventListener("click", () =>
@@ -812,7 +896,7 @@
       event.preventDefault();
       const text = input.value.trim();
       if (!text && !attachment) {
-        input.focus();
+        input.focus({ preventScroll: true });
         return;
       }
       const target = isThread ? $("[data-thread-messages]") : messagesRoot;
@@ -843,7 +927,7 @@
       $(".pending-files", form).textContent = "";
       list.hidden = true;
       target.scrollTop = target.scrollHeight;
-      input.focus();
+      input.focus({ preventScroll: true });
     });
   });
   if (query.get("thread") === "open") $("[data-thread-open]")?.click();
@@ -1013,7 +1097,7 @@
       button.addEventListener("click", () => {
         searchInput.value = "";
         renderSearch();
-        searchInput.focus();
+        searchInput.focus({ preventScroll: true });
       }),
     );
     $("[data-search-sort]").addEventListener("change", renderSearch);
