@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Connectify: корпоративный мессенджер для командного общения.">
+  <meta name="color-scheme" content="light dark">
+  <title>Личные сообщения | Connectify</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/design.css">
+  <script src="js/theme.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-version="1" data-storage="connectify-artur" data-own="Галкин Артур" data-email="galkin@north.team" data-colleague="Илья Ковалёв" data-second="Мария Лебедева" data-default-channel="дизайн" data-default-workspace="Studio North">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<!-- Static page content remains available when JavaScript is disabled. -->
+<div class="app" data-page="dm">
+<aside class="sidebar" id="sidebar" aria-label="Рабочее пространство">
+  <a class="brand" href="channel.html" aria-label="Connectify на главную"><span class="brand-icon"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / logo">
+<path id="Vector" d="M4.79167 11.0208L9.58333 6.22917L13.4167 10.0625L18.2083 5.27083M4.79167 17.7292L9.58333 12.9375L13.4167 16.7708L18.2083 11.9792" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+<path id="Vector_2" d="M5.75 11.0208C5.75 11.5501 5.32094 11.9792 4.79167 11.9792C4.26239 11.9792 3.83333 11.5501 3.83333 11.0208C3.83333 10.4916 4.26239 10.0625 4.79167 10.0625C5.32094 10.0625 5.75 10.4916 5.75 11.0208Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+<path id="Vector_3" d="M19.1667 11.9792C19.1667 12.5084 18.7376 12.9375 18.2083 12.9375C17.6791 12.9375 17.25 12.5084 17.25 11.9792C17.25 11.4499 17.6791 11.0208 18.2083 11.0208C18.7376 11.0208 19.1667 11.4499 19.1667 11.9792Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+</svg>
+</span>Connectify</a><button type="button" class="icon-btn sidebar-close" aria-label="Закрыть меню" data-tooltip="Закрыть меню" data-menu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  <a class="workspace" href="onboarding.html"><span>N</span><span><strong data-workspace>Studio North</strong><small>Рабочее пространство</small></span><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chevron">
+<path id="Vector" d="M4.66667 6.66667L8 10L11.3333 6.66667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</a>
+  <a class="sidebar-search" href="search.html"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / search">
+<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>Найти в Studio North</span><kbd>⌘ K</kbd></a>
+  <nav class="side-scroll" aria-label="Навигация">
+    <a class="side-link " href="notifications.html"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / bell">
+<path id="Vector" d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+Уведомления<span class="badge" data-unread-count>3</span></a>
+    <div class="nav-heading">КАНАЛЫ<button type="button" class="icon-btn " aria-label="Добавить канал" data-tooltip="Добавить канал" data-add-channel><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / plus">
+<path id="Vector" d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+    <a href="channel.html?channel=общее" class="side-link " data-channel="общее"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / hash">
+<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>общее</span></a><a href="channel.html?channel=дизайн" class="side-link " data-channel="дизайн"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / hash">
+<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>дизайн</span><span class="badge">2</span></a><a href="channel.html?channel=разработка" class="side-link " data-channel="разработка"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / hash">
+<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>разработка</span></a><a href="channel.html?channel=релизы" class="side-link " data-channel="релизы"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / hash">
+<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>релизы</span></a>
+    <div class="nav-heading">ЛИЧНЫЕ СООБЩЕНИЯ<a class="icon-btn" href="search.html?tab=people" aria-label="Найти коллегу"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / plus">
+<path id="Vector" d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</a></div>
+    <a class="side-link active" href="dm.html?person=0"><span class="avatar avatar-28 avatar-blue">ИК<i class="status status-online" aria-label="online"></i></span><span>Илья Ковалёв</span></a><a class="side-link " href="dm.html?person=1"><span class="avatar avatar-28 avatar-purple">МЛ<i class="status status-away" aria-label="away"></i></span><span>Мария Лебедева</span></a><a class="side-link " href="dm.html?person=2"><span class="avatar avatar-28 avatar-orange">ДВ<i class="status status-dnd" aria-label="dnd"></i></span><span>Денис Волков</span></a><a class="side-link " href="dm.html?person=3"><span class="avatar avatar-28 avatar-pink">ОН<i class="status status-invisible" aria-label="invisible"></i></span><span>Ольга Никитина</span></a>
+  </nav>
+  <a class="side-user" href="profile-edit.html"><span class="avatar avatar-36 " data-own-avatar>ГА<i class="status status-online" aria-label="online"></i></span><span><strong data-own-name>Галкин Артур</strong><small data-own-status>В сети</small></span><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</a>
+</aside><button class="backdrop" type="button" aria-label="Закрыть меню" data-menu-close></button>
+<main class="main" id="main">
+  <header class="page-header"><button type="button" class="icon-btn burger" aria-label="Открыть меню" data-tooltip="Открыть меню" data-menu-open aria-controls="sidebar" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="header-tile"><span class="avatar avatar-36 avatar-blue">ИК<i class="status status-online" aria-label="online"></i></span></div><div><h1 data-page-title>Илья Ковалёв</h1><p data-page-subtitle>В сети</p></div><div class="header-actions"><button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему" data-tooltip="Переключить тему" data-theme-toggle aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11Z"/></svg></button><button type="button" class="icon-btn " aria-label="Действия страницы" data-tooltip="Действия страницы" data-page-actions><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div></header>
+  <div class="conversation-layout"><section class="conversation" aria-label="Личная переписка"><div class="messages" data-messages><div class="date-divider">Сегодня</div><article class="message " data-message>
+ <span class="avatar avatar-36 avatar-blue">ИК</span>
+ <div class="message-content"><div class="message-meta"><strong >Илья Ковалёв</strong><time datetime="2026-11-10T09:42:00">09:42</time></div><div class="message-text">Привет! Ты уже посмотрел новый поиск?</div><a class="file-card" href="search.html?tab=files"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / file">
+<path id="Vector" d="M15.75 7V6.125L12.25 2.625H5.25V18.375H15.75V7ZM12.25 2.625V7H15.75M7.875 11.375H13.125M7.875 14.875H13.125" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span><strong>Главная страница</strong><small>Figma, 3,1 МБ</small></span><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / arrow">
+<path id="Vector" d="M2.5 7.5H11.875M8.125 11.25L11.875 7.5L8.125 3.75" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</a></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article><article class="message " data-message>
+ <span class="avatar avatar-36 " data-own-avatar>ГА</span>
+ <div class="message-content"><div class="message-meta"><strong data-own-name>Галкин Артур</strong><time datetime="2026-11-10T09:48:00">09:48</time></div><div class="message-text">Привет! Да, добавил фильтры и обновил результаты. <s>Старый вариант</s> больше не используем.</div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article><article class="message " data-message>
+ <span class="avatar avatar-36 avatar-blue">ИК</span>
+ <div class="message-content"><div class="message-meta"><strong >Илья Ковалёв</strong><time datetime="2026-11-10T09:51:00">09:51</time></div><div class="message-text">Отлично! Тогда отправь макет, пожалуйста. Я начну переносить его в HTML и CSS.</div><div class="reactions"><button class="pill" type="button" aria-label="Нравится, 4 реакции" aria-pressed="true" data-reaction="heart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg> <span>4</span></button><button class="pill" type="button" aria-label="Готово, 2 реакции" aria-pressed="false" data-reaction="check"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg> <span>2</span></button></div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article><article class="message " data-message>
+ <span class="avatar avatar-36 " data-own-avatar>ГА</span>
+ <div class="message-content"><div class="message-meta"><strong data-own-name>Галкин Артур</strong><time datetime="2026-11-10T10:02:00">10:02</time></div><div class="message-text">Готово! Посмотри обновлённую версию. Основные изменения уже внесены.</div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article></div><form class="composer" data-composer="main" aria-label="Новое сообщение">
+  <div class="formatting" role="toolbar" aria-label="Форматирование"><button class="icon-btn" type="button" data-format="bold" aria-label="Жирный" data-tooltip="Жирный"><b>B</b></button><button class="icon-btn" type="button" data-format="italic" aria-label="Курсив" data-tooltip="Курсив"><i>I</i></button><button class="icon-btn" type="button" data-format="strike" aria-label="Зачёркнутый" data-tooltip="Зачёркнутый"><s>S</s></button><button type="button" class="icon-btn " aria-label="Добавить ссылку" data-tooltip="Добавить ссылку" data-format="link"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / link">
+<path id="Vector" d="M7.5 10.5L10.5 7.5M6 12L5.25 12.75C4.83014 12.9505 4.35844 13.0159 3.89985 12.9373C3.44126 12.8586 3.01835 12.6397 2.68934 12.3107C2.36033 11.9817 2.14141 11.5587 2.06273 11.1002C1.98405 10.6416 2.04948 10.1699 2.25 9.75L5.25 6.75C5.66252 6.38103 6.19655 6.17705 6.75 6.17705C7.30345 6.17705 7.83748 6.38103 8.25 6.75M9.75 11.25C10.1625 11.619 10.6966 11.8229 11.25 11.8229C11.8034 11.8229 12.3375 11.619 12.75 11.25L15.75 8.25C15.9505 7.83014 16.0159 7.35844 15.9373 6.89985C15.8586 6.44126 15.6397 6.01835 15.3107 5.68934C14.9817 5.36033 14.5587 5.14141 14.1002 5.06273C13.6416 4.98405 13.1699 5.04948 12.75 5.25L12 6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Код" data-tooltip="Код" data-format="code"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / code">
+<path id="Vector" d="M6 4.5L1.5 9L6 13.5M12 4.5L16.5 9L12 13.5M10.5 3.75L7.5 14.25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+  <label class="sr-only" for="message-text">Текст сообщения</label><textarea id="message-text" name="message" rows="1" maxlength="5000" placeholder="Написать в #дизайн…" data-message-input></textarea>
+  <div class="mention-list" role="listbox" aria-label="Участники" hidden></div>
+  <div class="pending-files" aria-live="polite"></div>
+  <div class="composer-footer"><button type="button" class="icon-btn " aria-label="Прикрепить файл" data-tooltip="Прикрепить файл" data-attach><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / attach">
+<path id="Vector" d="M6.75 9.75L10.95 5.55C11.2882 5.21185 11.7468 5.02188 12.225 5.02188C12.7032 5.02188 13.1618 5.21185 13.5 5.55C13.8382 5.88815 14.0281 6.34678 14.0281 6.825C14.0281 7.30322 13.8382 7.76185 13.5 8.1L8.025 13.575C7.4581 14.1419 6.68922 14.4604 5.8875 14.4604C5.08578 14.4604 4.3169 14.1419 3.75 13.575C3.1831 13.0081 2.86462 12.2392 2.86462 11.4375C2.86462 10.6358 3.1831 9.8669 3.75 9.3L9.525 3.525" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Добавить смайлик" data-tooltip="Добавить смайлик" data-emoji><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Упомянуть участника" data-tooltip="Упомянуть участника" data-mention><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / at">
+<path id="Vector" d="M11.55 9C11.55 10.4083 10.4083 11.55 9 11.55C7.59167 11.55 6.45 10.4083 6.45 9C6.45 7.59167 7.59167 6.45 9 6.45C10.4083 6.45 11.55 7.59167 11.55 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M11.55 6.75V10.5C11.55 10.8978 11.708 11.2794 11.9893 11.5607C12.2706 11.842 12.6522 12 13.05 12C13.4478 12 13.8294 11.842 14.1107 11.5607C14.392 11.2794 14.55 10.8978 14.55 10.5V9C14.5574 7.75097 14.1488 6.53501 13.3888 5.54383C12.6287 4.55265 11.5604 3.84265 10.3522 3.52576C9.144 3.20887 7.8647 3.30313 6.71601 3.79366C5.56731 4.2842 4.61456 5.14311 4.00796 6.23498C3.40137 7.32685 3.17545 8.58956 3.36581 9.82402C3.55618 11.0585 4.152 12.1945 5.05935 13.0529C5.96669 13.9113 7.13393 14.4433 8.37704 14.565C9.62015 14.6867 10.8684 14.3911 11.925 13.725" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><input type="file" data-attachment hidden><small>Enter отправить, Shift + Enter новая строка</small><button class="icon-btn send-btn" type="submit" aria-label="Отправить сообщение" data-tooltip="Отправить"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / send">
+<path id="Vector" d="M4.5 9L2.25 15L15.75 9L2.25 3L4.5 9ZM15.75 9H4.5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+</svg>
+</button></div>
+</form></section><aside class="thread-panel" id="thread" aria-label="Тред" hidden><div class="thread-header"><h2>Тред</h2><button type="button" class="icon-btn " aria-label="Закрыть тред" data-tooltip="Закрыть тред" data-thread-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="thread-body" data-thread-messages><article class="message " data-message>
+ <span class="avatar avatar-36 avatar-purple">МЛ</span>
+ <div class="message-content"><div class="message-meta"><strong >Мария Лебедева</strong><time datetime="2026-11-10T10:04:00">10:04</time></div><div class="message-text">Проверим поиск по сообщениям и файлам.</div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article><article class="message " data-message>
+ <span class="avatar avatar-36 avatar-blue">ИК</span>
+ <div class="message-content"><div class="message-meta"><strong >Илья Ковалёв</strong><time datetime="2026-11-10T10:09:00">10:09</time></div><div class="message-text">Результаты на мобильном тоже посмотрел. Всё работает.</div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article><article class="message " data-message>
+ <span class="avatar avatar-36 " data-own-avatar>ГА</span>
+ <div class="message-content"><div class="message-meta"><strong data-own-name>Галкин Артур</strong><time datetime="2026-11-10T10:12:00">10:12</time></div><div class="message-text">Спасибо, учту перед релизом.</div></div>
+ <div class="message-actions" aria-label="Действия сообщения"><button type="button" class="icon-btn " aria-label="Добавить реакцию" data-tooltip="Добавить реакцию" data-quick-reaction><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Ответить в треде" data-tooltip="Ответить в треде" data-thread-open><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Меню сообщения" data-tooltip="Меню сообщения" data-message-menu><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / more">
+<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+</article></div><form class="composer" data-composer="thread" aria-label="Новое сообщение">
+  <div class="formatting" role="toolbar" aria-label="Форматирование"><button class="icon-btn" type="button" data-format="bold" aria-label="Жирный" data-tooltip="Жирный"><b>B</b></button><button class="icon-btn" type="button" data-format="italic" aria-label="Курсив" data-tooltip="Курсив"><i>I</i></button><button class="icon-btn" type="button" data-format="strike" aria-label="Зачёркнутый" data-tooltip="Зачёркнутый"><s>S</s></button><button type="button" class="icon-btn " aria-label="Добавить ссылку" data-tooltip="Добавить ссылку" data-format="link"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / link">
+<path id="Vector" d="M7.5 10.5L10.5 7.5M6 12L5.25 12.75C4.83014 12.9505 4.35844 13.0159 3.89985 12.9373C3.44126 12.8586 3.01835 12.6397 2.68934 12.3107C2.36033 11.9817 2.14141 11.5587 2.06273 11.1002C1.98405 10.6416 2.04948 10.1699 2.25 9.75L5.25 6.75C5.66252 6.38103 6.19655 6.17705 6.75 6.17705C7.30345 6.17705 7.83748 6.38103 8.25 6.75M9.75 11.25C10.1625 11.619 10.6966 11.8229 11.25 11.8229C11.8034 11.8229 12.3375 11.619 12.75 11.25L15.75 8.25C15.9505 7.83014 16.0159 7.35844 15.9373 6.89985C15.8586 6.44126 15.6397 6.01835 15.3107 5.68934C14.9817 5.36033 14.5587 5.14141 14.1002 5.06273C13.6416 4.98405 13.1699 5.04948 12.75 5.25L12 6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Код" data-tooltip="Код" data-format="code"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / code">
+<path id="Vector" d="M6 4.5L1.5 9L6 13.5M12 4.5L16.5 9L12 13.5M10.5 3.75L7.5 14.25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button></div>
+  <label class="sr-only" for="reply-text">Текст сообщения</label><textarea id="reply-text" name="message" rows="1" maxlength="5000" placeholder="Написать в тред…" data-message-input></textarea>
+  <div class="mention-list" role="listbox" aria-label="Участники" hidden></div>
+  <div class="pending-files" aria-live="polite"></div>
+  <div class="composer-footer"><button type="button" class="icon-btn " aria-label="Прикрепить файл" data-tooltip="Прикрепить файл" data-attach><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / attach">
+<path id="Vector" d="M6.75 9.75L10.95 5.55C11.2882 5.21185 11.7468 5.02188 12.225 5.02188C12.7032 5.02188 13.1618 5.21185 13.5 5.55C13.8382 5.88815 14.0281 6.34678 14.0281 6.825C14.0281 7.30322 13.8382 7.76185 13.5 8.1L8.025 13.575C7.4581 14.1419 6.68922 14.4604 5.8875 14.4604C5.08578 14.4604 4.3169 14.1419 3.75 13.575C3.1831 13.0081 2.86462 12.2392 2.86462 11.4375C2.86462 10.6358 3.1831 9.8669 3.75 9.3L9.525 3.525" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Добавить смайлик" data-tooltip="Добавить смайлик" data-emoji><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / smile">
+<path id="Vector" d="M15.375 9C15.375 12.5208 12.5208 15.375 9 15.375C5.47918 15.375 2.625 12.5208 2.625 9C2.625 5.47918 5.47918 2.625 9 2.625C12.5208 2.625 15.375 5.47918 15.375 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M6.75 10.5C6.98333 10.8883 7.31317 11.2096 7.70744 11.4326C8.10172 11.6557 8.547 11.7729 9 11.7729C9.453 11.7729 9.89828 11.6557 10.2926 11.4326C10.6868 11.2096 11.0167 10.8883 11.25 10.5M6.75 6.75H6.7575M11.25 6.75H11.2575" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><button type="button" class="icon-btn " aria-label="Упомянуть участника" data-tooltip="Упомянуть участника" data-mention><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / at">
+<path id="Vector" d="M11.55 9C11.55 10.4083 10.4083 11.55 9 11.55C7.59167 11.55 6.45 10.4083 6.45 9C6.45 7.59167 7.59167 6.45 9 6.45C10.4083 6.45 11.55 7.59167 11.55 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M11.55 6.75V10.5C11.55 10.8978 11.708 11.2794 11.9893 11.5607C12.2706 11.842 12.6522 12 13.05 12C13.4478 12 13.8294 11.842 14.1107 11.5607C14.392 11.2794 14.55 10.8978 14.55 10.5V9C14.5574 7.75097 14.1488 6.53501 13.3888 5.54383C12.6287 4.55265 11.5604 3.84265 10.3522 3.52576C9.144 3.20887 7.8647 3.30313 6.71601 3.79366C5.56731 4.2842 4.61456 5.14311 4.00796 6.23498C3.40137 7.32685 3.17545 8.58956 3.36581 9.82402C3.55618 11.0585 4.152 12.1945 5.05935 13.0529C5.96669 13.9113 7.13393 14.4433 8.37704 14.565C9.62015 14.6867 10.8684 14.3911 11.925 13.725" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+</button><input type="file" data-attachment hidden><small>Enter отправить, Shift + Enter новая строка</small><button class="icon-btn send-btn" type="submit" aria-label="Отправить сообщение" data-tooltip="Отправить"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / send">
+<path id="Vector" d="M4.5 9L2.25 15L15.75 9L2.25 3L4.5 9ZM15.75 9H4.5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+</svg>
+</button></div>
+</form></aside></div>
+</main>
+<nav class="mobile-tabs" aria-label="Основные разделы"><a href="channel.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / hash">
+<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>Каналы</span></a><a href="dm.html" class="active" aria-current="page"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / chat">
+<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>Сообщения</span></a><a href="search.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / search">
+<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>Поиск</span></a><a href="notifications.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon / bell">
+<path id="Vector" d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+</g>
+</svg>
+<span>Активность</span></a><a href="profile-edit.html" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Профиль</span></a></nav>
+</div>
+<dialog id="recovery-dialog" class="dialog"><form data-recovery-form><div class="dialog-title"><h2>Восстановить пароль</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="lead">Введите email вашего аккаунта.</p><div class="field"><label for="recovery-email">Email</label><input class="control" id="recovery-email" name="recovery-email" type="email" value="" required autocomplete="email"></div><p class="form-error" data-recovery-error role="alert" hidden></p><p class="recovery-result" hidden>Это учебная версия без почтового сервера. Для входа используйте демонстрационные данные на странице входа.</p><button class="btn btn-block" type="submit">Продолжить</button></form></dialog>
+<dialog id="channel-dialog" class="dialog"><form data-channel-form><div class="dialog-title"><h2>Новый канал</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="field"><label for="channel-name">Название канала</label><input class="control" id="channel-name" name="channel-name" type="text" value="" required maxlength="35" pattern="[А-Яа-яЁёA-Za-z0-9_-]+" placeholder="новый-проект"></div><small>Буквы, цифры, дефис и подчёркивание.</small><button class="btn btn-block" type="submit">Создать канал</button></form></dialog>
+<dialog id="info-dialog" class="dialog"><div class="dialog-title"><h2>Connectify</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p data-info-text></p><button class="btn" type="button" data-dialog-close>Понятно</button></dialog>
+<div class="context-menu" data-context-menu hidden><button type="button" data-context-action="copy">Скопировать текст</button><button type="button" data-context-action="edit">Редактировать своё сообщение</button><button class="danger" type="button" data-context-action="delete">Удалить своё сообщение</button></div><div class="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p class="noscript">Для отправки сообщений, поиска и сохранения настроек включите JavaScript.</p></noscript>
+</body>
+</html>
