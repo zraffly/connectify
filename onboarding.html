@@ -1,42 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Connectify: корпоративный мессенджер для командного общения.">
-  <meta name="color-scheme" content="light dark">
-  <title>Начало работы | Connectify</title>
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/design.css">
-  <script src="js/theme.js"></script>
-  <script src="js/app.js" defer></script>
-</head>
-<body data-version="1" data-storage="connectify-artur" data-own="Галкин Артур" data-email="galkin@north.team" data-colleague="Илья Ковалёв" data-second="Мария Лебедева" data-default-channel="дизайн" data-default-workspace="Studio North">
-<a class="skip-link" href="#main">Перейти к содержимому</a>
-<!-- Static page content remains available when JavaScript is disabled. -->
-<main class="onboarding-page" id="main"><a class="brand" href="channel.html" aria-label="Connectify на главную"><span class="brand-icon"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / logo">
-<path id="Vector" d="M4.79167 11.0208L9.58333 6.22917L13.4167 10.0625L18.2083 5.27083M4.79167 17.7292L9.58333 12.9375L13.4167 16.7708L18.2083 11.9792" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-<path id="Vector_2" d="M5.75 11.0208C5.75 11.5501 5.32094 11.9792 4.79167 11.9792C4.26239 11.9792 3.83333 11.5501 3.83333 11.0208C3.83333 10.4916 4.26239 10.0625 4.79167 10.0625C5.32094 10.0625 5.75 10.4916 5.75 11.0208Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-<path id="Vector_3" d="M19.1667 11.9792C19.1667 12.5084 18.7376 12.9375 18.2083 12.9375C17.6791 12.9375 17.25 12.5084 17.25 11.9792C17.25 11.4499 17.6791 11.0208 18.2083 11.0208C18.7376 11.0208 19.1667 11.4499 19.1667 11.9792Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-</g>
-</svg>
-</span>Connectify</a><div class="auth-tools"><button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему" data-tooltip="Переключить тему" data-theme-toggle aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11Z"/></svg></button></div><section class="onboarding-card"><ol class="stepper" aria-label="Шаги настройки"><li class="active" aria-current="step">Воркспейс</li><li>Профиль</li><li>Готово</li></ol>
-<form data-onboarding><div data-step="1"><p class="eyebrow">ШАГ 1 ИЗ 3</p><h1>Как вы хотите начать?</h1><p class="lead">Создайте новое пространство для команды или присоединитесь к существующему по приглашению.</p><div class="workspace-choices"><button class="workspace-choice" type="button" data-workspace-choice="create" aria-pressed="true"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / plus">
-<path id="Vector" d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<strong>Создать воркспейс</strong><small>Настройте каналы и пригласите коллег</small></button><button class="workspace-choice" type="button" data-workspace-choice="join" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 4v2"/></svg><strong>Вступить в воркспейс</strong><small>Используйте ссылку или код приглашения</small></button></div><div data-workspace-create><div class="field"><label for="workspace-name">Название команды</label><input class="control" id="workspace-name" name="workspace-name" type="text" value="Studio North" required maxlength="50"></div></div><div data-workspace-join hidden><div class="field"><label for="invite-code">Код приглашения</label><input class="control" id="invite-code" name="invite-code" type="text" value="" placeholder="CONNECT2026"></div><small>Демонстрационный код: CONNECT2026</small></div></div>
-<div data-step="2" hidden><p class="eyebrow">ШАГ 2 ИЗ 3</p><h1>Познакомимся?</h1><p class="lead">Укажите имя, которое увидят ваши коллеги.</p><div class="avatar-upload"><span class="avatar avatar-80 " data-own-avatar>ГА</span><p class="muted">Аватар можно загрузить в настройках.</p></div><div class="field"><label for="onboarding-name">Ваше имя</label><input class="control" id="onboarding-name" name="onboarding-name" type="text" value="Галкин Артур" required maxlength="60" autocomplete="name"></div><div class="field"><label for="onboarding-role">Должность</label><input class="control" id="onboarding-role" name="onboarding-role" type="text" value="Дизайнер продукта" maxlength="80"></div></div>
-<div data-step="3" hidden><div class="done-art"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></div><p class="eyebrow">ШАГ 3 ИЗ 3</p><h1>Всё готово к работе</h1><p class="lead">Ваша команда <strong data-workspace>Studio North</strong> уже ждёт. Начните с общего канала или напишите коллеге.</p></div><p class="form-error" data-onboarding-error role="alert" hidden></p><div class="onboarding-actions"><button type="button" class="btn btn-ghost" data-step-back hidden>Назад</button><a class="btn btn-ghost" href="login.html" data-onboarding-login>Уже есть аккаунт</a><button class="btn" type="submit" data-step-next>Продолжить</button></div></form></section></main>
-<dialog id="recovery-dialog" class="dialog"><form data-recovery-form><div class="dialog-title"><h2>Восстановить пароль</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="lead">Введите email вашего аккаунта.</p><div class="field"><label for="recovery-email">Email</label><input class="control" id="recovery-email" name="recovery-email" type="email" value="" required autocomplete="email"></div><p class="form-error" data-recovery-error role="alert" hidden></p><p class="recovery-result" hidden>Это учебная версия без почтового сервера. Для входа используйте демонстрационные данные на странице входа.</p><button class="btn btn-block" type="submit">Продолжить</button></form></dialog>
-<dialog id="channel-dialog" class="dialog"><form data-channel-form><div class="dialog-title"><h2>Новый канал</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="field"><label for="channel-name">Название канала</label><input class="control" id="channel-name" name="channel-name" type="text" value="" required maxlength="35" pattern="[А-Яа-яЁёA-Za-z0-9_-]+" placeholder="новый-проект"></div><small>Буквы, цифры, дефис и подчёркивание.</small><button class="btn btn-block" type="submit">Создать канал</button></form></dialog>
-<dialog id="info-dialog" class="dialog"><div class="dialog-title"><h2>Connectify</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p data-info-text></p><button class="btn" type="button" data-dialog-close>Понятно</button></dialog>
-<div class="context-menu" data-context-menu hidden><button type="button" data-context-action="copy">Скопировать текст</button><button type="button" data-context-action="edit">Редактировать своё сообщение</button><button class="danger" type="button" data-context-action="delete">Удалить своё сообщение</button></div><div class="toast" role="status" aria-live="polite" hidden></div>
-<noscript><p class="noscript">Для отправки сообщений, поиска и сохранения настроек включите JavaScript.</p></noscript>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Connectify: корпоративный мессенджер для командного общения."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Начало работы | Connectify</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/InterVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/design.css" />
+    <script src="js/theme.js"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body
+    data-version="1"
+    data-storage="connectify-artur"
+    data-own="Галкин Артур"
+    data-email="galkin@north.team"
+    data-colleague="Илья Ковалёв"
+    data-second="Мария Лебедева"
+    data-default-channel="дизайн"
+    data-default-workspace="Studio North"
+  >
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <!-- Static page content remains available when JavaScript is disabled. -->
+    <main class="onboarding-page" id="main">
+      <a class="brand" href="channel.html" aria-label="Connectify на главную"
+        ><span class="brand-icon"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="23"
+            height="23"
+            viewBox="0 0 23 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M4.79167 11.0208L9.58333 6.22917L13.4167 10.0625L18.2083 5.27083M4.79167 17.7292L9.58333 12.9375L13.4167 16.7708L18.2083 11.9792"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M5.75 11.0208C5.75 11.5501 5.32094 11.9792 4.79167 11.9792C4.26239 11.9792 3.83333 11.5501 3.83333 11.0208C3.83333 10.4916 4.26239 10.0625 4.79167 10.0625C5.32094 10.0625 5.75 10.4916 5.75 11.0208Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M19.1667 11.9792C19.1667 12.5084 18.7376 12.9375 18.2083 12.9375C17.6791 12.9375 17.25 12.5084 17.25 11.9792C17.25 11.4499 17.6791 11.0208 18.2083 11.0208C18.7376 11.0208 19.1667 11.4499 19.1667 11.9792Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg> </span
+        >Connectify</a
+      >
+      <div class="auth-tools">
+        <button
+          type="button"
+          class="icon-btn theme-toggle"
+          aria-label="Переключить тему"
+          data-tooltip="Переключить тему"
+          data-theme-toggle
+          aria-pressed="false"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11Z" />
+          </svg>
+        </button>
+      </div>
+      <section class="onboarding-card">
+        <ol class="stepper" aria-label="Шаги настройки">
+          <li class="active" aria-current="step">Воркспейс</li>
+          <li>Профиль</li>
+          <li>Готово</li>
+        </ol>
+        <form data-onboarding>
+          <div data-step="1">
+            <p class="eyebrow">ШАГ 1 ИЗ 3</p>
+            <h1>Как вы хотите начать?</h1>
+            <p class="lead">
+              Создайте новое пространство для команды или присоединитесь к
+              существующему по приглашению.
+            </p>
+            <div class="workspace-choices">
+              <button
+                class="workspace-choice"
+                type="button"
+                data-workspace-choice="create"
+                aria-pressed="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  preserveAspectRatio="none"
+                  overflow="visible"
+                  style="display: block"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="currentColor"
+                    />
+                  </g>
+                </svg>
+                <strong>Создать воркспейс</strong
+                ><small>Настройте каналы и пригласите коллег</small></button
+              ><button
+                class="workspace-choice"
+                type="button"
+                data-workspace-choice="join"
+                aria-pressed="false"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="9" cy="8" r="3" />
+                  <path
+                    d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 4v2"
+                  /></svg
+                ><strong>Вступить в воркспейс</strong
+                ><small>Используйте ссылку или код приглашения</small>
+              </button>
+            </div>
+            <div data-workspace-create>
+              <div class="field">
+                <label for="workspace-name">Название команды</label
+                ><input
+                  class="control"
+                  id="workspace-name"
+                  name="workspace-name"
+                  type="text"
+                  value="Studio North"
+                  required
+                  maxlength="50"
+                />
+              </div>
+            </div>
+            <div data-workspace-join hidden>
+              <div class="field">
+                <label for="invite-code">Код приглашения</label
+                ><input
+                  class="control"
+                  id="invite-code"
+                  name="invite-code"
+                  type="text"
+                  value=""
+                  placeholder="CONNECT2026"
+                />
+              </div>
+              <small>Демонстрационный код: CONNECT2026</small>
+            </div>
+          </div>
+          <div data-step="2" hidden>
+            <p class="eyebrow">ШАГ 2 ИЗ 3</p>
+            <h1>Познакомимся?</h1>
+            <p class="lead">Укажите имя, которое увидят ваши коллеги.</p>
+            <div class="avatar-upload">
+              <span class="avatar avatar-80" data-own-avatar>ГА</span>
+              <p class="muted">Аватар можно загрузить в настройках.</p>
+            </div>
+            <div class="field">
+              <label for="onboarding-name">Ваше имя</label
+              ><input
+                class="control"
+                id="onboarding-name"
+                name="onboarding-name"
+                type="text"
+                value="Галкин Артур"
+                required
+                maxlength="60"
+                autocomplete="name"
+              />
+            </div>
+            <div class="field">
+              <label for="onboarding-role">Должность</label
+              ><input
+                class="control"
+                id="onboarding-role"
+                name="onboarding-role"
+                type="text"
+                value="Дизайнер продукта"
+                maxlength="80"
+              />
+            </div>
+          </div>
+          <div data-step="3" hidden>
+            <div class="done-art">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="m5 12 4 4L19 6" />
+              </svg>
+            </div>
+            <p class="eyebrow">ШАГ 3 ИЗ 3</p>
+            <h1>Всё готово к работе</h1>
+            <p class="lead">
+              Ваша команда <strong data-workspace>Studio North</strong> уже
+              ждёт. Начните с общего канала или напишите коллеге.
+            </p>
+          </div>
+          <p class="form-error" data-onboarding-error role="alert" hidden></p>
+          <div class="onboarding-actions">
+            <button type="button" class="btn btn-ghost" data-step-back hidden>
+              Назад</button
+            ><a class="btn btn-ghost" href="login.html" data-onboarding-login
+              >Уже есть аккаунт</a
+            ><button class="btn" type="submit" data-step-next>
+              Продолжить
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <dialog id="recovery-dialog" class="dialog">
+      <form data-recovery-form>
+        <div class="dialog-title">
+          <h2>Восстановить пароль</h2>
+          <button
+            type="button"
+            class="icon-btn"
+            aria-label="Закрыть окно"
+            data-tooltip="Закрыть окно"
+            data-dialog-close
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <p class="lead">Введите email вашего аккаунта.</p>
+        <div class="field">
+          <label for="recovery-email">Email</label
+          ><input
+            class="control"
+            id="recovery-email"
+            name="recovery-email"
+            type="email"
+            value=""
+            required
+            autocomplete="email"
+          />
+        </div>
+        <p class="form-error" data-recovery-error role="alert" hidden></p>
+        <p class="recovery-result" hidden>
+          Это учебная версия без почтового сервера. Для входа используйте
+          демонстрационные данные на странице входа.
+        </p>
+        <button class="btn btn-block" type="submit">Продолжить</button>
+      </form>
+    </dialog>
+    <dialog id="channel-dialog" class="dialog">
+      <form data-channel-form>
+        <div class="dialog-title">
+          <h2>Новый канал</h2>
+          <button
+            type="button"
+            class="icon-btn"
+            aria-label="Закрыть окно"
+            data-tooltip="Закрыть окно"
+            data-dialog-close
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <div class="field">
+          <label for="channel-name">Название канала</label
+          ><input
+            class="control"
+            id="channel-name"
+            name="channel-name"
+            type="text"
+            value=""
+            required
+            maxlength="35"
+            pattern="[А-Яа-яЁёA-Za-z0-9_-]+"
+            placeholder="новый-проект"
+          />
+        </div>
+        <small>Буквы, цифры, дефис и подчёркивание.</small
+        ><button class="btn btn-block" type="submit">Создать канал</button>
+      </form>
+    </dialog>
+    <dialog id="info-dialog" class="dialog">
+      <div class="dialog-title">
+        <h2>Connectify</h2>
+        <button
+          type="button"
+          class="icon-btn"
+          aria-label="Закрыть окно"
+          data-tooltip="Закрыть окно"
+          data-dialog-close
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <p data-info-text></p>
+      <button class="btn" type="button" data-dialog-close>Понятно</button>
+    </dialog>
+    <div class="context-menu" data-context-menu hidden>
+      <button type="button" data-context-action="copy">Скопировать текст</button
+      ><button type="button" data-context-action="edit">
+        Редактировать своё сообщение</button
+      ><button class="danger" type="button" data-context-action="delete">
+        Удалить своё сообщение
+      </button>
+    </div>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <noscript
+      ><p class="noscript">
+        Для отправки сообщений, поиска и сохранения настроек включите
+        JavaScript.
+      </p></noscript
+    >
+  </body>
 </html>

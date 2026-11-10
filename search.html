@@ -1,158 +1,1013 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Connectify: корпоративный мессенджер для командного общения.">
-  <meta name="color-scheme" content="light dark">
-  <title>Поиск | Connectify</title>
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/design.css">
-  <script src="js/theme.js"></script>
-  <script src="js/app.js" defer></script>
-</head>
-<body data-version="1" data-storage="connectify-artur" data-own="Галкин Артур" data-email="galkin@north.team" data-colleague="Илья Ковалёв" data-second="Мария Лебедева" data-default-channel="дизайн" data-default-workspace="Studio North">
-<a class="skip-link" href="#main">Перейти к содержимому</a>
-<!-- Static page content remains available when JavaScript is disabled. -->
-<div class="app" data-page="search">
-<aside class="sidebar" id="sidebar" aria-label="Рабочее пространство">
-  <a class="brand" href="channel.html" aria-label="Connectify на главную"><span class="brand-icon"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / logo">
-<path id="Vector" d="M4.79167 11.0208L9.58333 6.22917L13.4167 10.0625L18.2083 5.27083M4.79167 17.7292L9.58333 12.9375L13.4167 16.7708L18.2083 11.9792" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-<path id="Vector_2" d="M5.75 11.0208C5.75 11.5501 5.32094 11.9792 4.79167 11.9792C4.26239 11.9792 3.83333 11.5501 3.83333 11.0208C3.83333 10.4916 4.26239 10.0625 4.79167 10.0625C5.32094 10.0625 5.75 10.4916 5.75 11.0208Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-<path id="Vector_3" d="M19.1667 11.9792C19.1667 12.5084 18.7376 12.9375 18.2083 12.9375C17.6791 12.9375 17.25 12.5084 17.25 11.9792C17.25 11.4499 17.6791 11.0208 18.2083 11.0208C18.7376 11.0208 19.1667 11.4499 19.1667 11.9792Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-</g>
-</svg>
-</span>Connectify</a><button type="button" class="icon-btn sidebar-close" aria-label="Закрыть меню" data-tooltip="Закрыть меню" data-menu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
-  <a class="workspace" href="onboarding.html"><span>N</span><span><strong data-workspace>Studio North</strong><small>Рабочее пространство</small></span><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / chevron">
-<path id="Vector" d="M4.66667 6.66667L8 10L11.3333 6.66667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</a>
-  <a class="sidebar-search" href="search.html"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / search">
-<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>Найти в Studio North</span><kbd>⌘ K</kbd></a>
-  <nav class="side-scroll" aria-label="Навигация">
-    <a class="side-link " href="notifications.html"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / bell">
-<path id="Vector" d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-Уведомления<span class="badge" data-unread-count>3</span></a>
-    <div class="nav-heading">КАНАЛЫ<button type="button" class="icon-btn " aria-label="Добавить канал" data-tooltip="Добавить канал" data-add-channel><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / plus">
-<path id="Vector" d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</button></div>
-    <a href="channel.html?channel=общее" class="side-link " data-channel="общее"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / hash">
-<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>общее</span></a><a href="channel.html?channel=дизайн" class="side-link " data-channel="дизайн"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / hash">
-<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>дизайн</span><span class="badge">2</span></a><a href="channel.html?channel=разработка" class="side-link " data-channel="разработка"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / hash">
-<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>разработка</span></a><a href="channel.html?channel=релизы" class="side-link " data-channel="релизы"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / hash">
-<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>релизы</span></a>
-    <div class="nav-heading">ЛИЧНЫЕ СООБЩЕНИЯ<a class="icon-btn" href="search.html?tab=people" aria-label="Найти коллегу"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / plus">
-<path id="Vector" d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</a></div>
-    <a class="side-link " href="dm.html?person=0"><span class="avatar avatar-28 avatar-blue">ИК<i class="status status-online" aria-label="online"></i></span><span>Илья Ковалёв</span></a><a class="side-link " href="dm.html?person=1"><span class="avatar avatar-28 avatar-purple">МЛ<i class="status status-away" aria-label="away"></i></span><span>Мария Лебедева</span></a><a class="side-link " href="dm.html?person=2"><span class="avatar avatar-28 avatar-orange">ДВ<i class="status status-dnd" aria-label="dnd"></i></span><span>Денис Волков</span></a><a class="side-link " href="dm.html?person=3"><span class="avatar avatar-28 avatar-pink">ОН<i class="status status-invisible" aria-label="invisible"></i></span><span>Ольга Никитина</span></a>
-  </nav>
-  <a class="side-user" href="profile-edit.html"><span class="avatar avatar-36 " data-own-avatar>ГА<i class="status status-online" aria-label="online"></i></span><span><strong data-own-name>Галкин Артур</strong><small data-own-status>В сети</small></span><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / more">
-<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</a>
-</aside><button class="backdrop" type="button" aria-label="Закрыть меню" data-menu-close></button>
-<main class="main" id="main">
-  <header class="page-header"><button type="button" class="icon-btn burger" aria-label="Открыть меню" data-tooltip="Открыть меню" data-menu-open aria-controls="sidebar" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="header-tile"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / search">
-<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</div><div><h1 data-page-title>Поиск</h1></div><div class="header-actions"><button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему" data-tooltip="Переключить тему" data-theme-toggle aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11Z"/></svg></button><button type="button" class="icon-btn " aria-label="Действия страницы" data-tooltip="Действия страницы" data-page-actions><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / more">
-<path id="Vector" d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_3" d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-</button></div></header>
-  <div class="page-body"><div class="content-width"><h2>Поиск в Studio North</h2><p class="lead">Находите сообщения, файлы и коллег в одном месте.</p>
-<form class="search-form" role="search" data-search-form><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / search">
-<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<label class="sr-only" for="query">Поисковый запрос</label><input class="control" type="search" id="query" name="q" value="поиск" placeholder="Поиск по рабочему пространству" autocomplete="off"><button type="button" class="icon-btn " aria-label="Очистить поиск" data-tooltip="Очистить поиск" data-search-clear><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>
-<div class="tabs" role="tablist" aria-label="Тип результатов"><button class="tab" type="button" role="tab" aria-selected="true" aria-controls="search-results" data-search-tab="messages">Сообщения<span class="badge" data-result-count="messages">3</span></button><button class="tab" type="button" role="tab" aria-selected="false" aria-controls="search-results" data-search-tab="files">Файлы<span class="badge" data-result-count="files">1</span></button><button class="tab" type="button" role="tab" aria-selected="false" aria-controls="search-results" data-search-tab="people">Люди<span class="badge" data-result-count="people">1</span></button><button class="tab" type="button" role="tab" aria-selected="false" aria-controls="search-results" data-search-tab="channels">Каналы<span class="badge" data-result-count="channels">1</span></button></div>
-<div class="search-summary"><span data-search-summary aria-live="polite">3 сообщения</span><label>Порядок <select class="sort-select" data-search-sort aria-label="Сортировка результатов"><option value="new">Сначала новые</option><option value="old">Сначала старые</option></select></label></div><div class="search-results" id="search-results" role="tabpanel"></div>
-<div class="empty-state" data-search-empty hidden><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / search">
-<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<h2>Ничего не найдено</h2><p class="muted">Попробуйте другой запрос или выберите другой раздел.</p><button class="btn btn-secondary" type="button" data-search-clear>Сбросить поиск</button></div>
-</div></div>
-</main>
-<nav class="mobile-tabs" aria-label="Основные разделы"><a href="channel.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / hash">
-<path id="Vector" d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>Каналы</span></a><a href="dm.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / chat">
-<path id="Vector" d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M5.625 7.1875H9.375" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>Сообщения</span></a><a href="search.html" class="active" aria-current="page"><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / search">
-<path id="Vector" d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-<path id="Vector_2" d="M11.3333 11.3333L14.5208 14.5208" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>Поиск</span></a><a href="notifications.html" class=""><svg aria-hidden="true" focusable="false" preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon / bell">
-<path id="Vector" d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</g>
-</svg>
-<span>Активность</span></a><a href="profile-edit.html" class=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Профиль</span></a></nav>
-</div>
-<dialog id="recovery-dialog" class="dialog"><form data-recovery-form><div class="dialog-title"><h2>Восстановить пароль</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="lead">Введите email вашего аккаунта.</p><div class="field"><label for="recovery-email">Email</label><input class="control" id="recovery-email" name="recovery-email" type="email" value="" required autocomplete="email"></div><p class="form-error" data-recovery-error role="alert" hidden></p><p class="recovery-result" hidden>Это учебная версия без почтового сервера. Для входа используйте демонстрационные данные на странице входа.</p><button class="btn btn-block" type="submit">Продолжить</button></form></dialog>
-<dialog id="channel-dialog" class="dialog"><form data-channel-form><div class="dialog-title"><h2>Новый канал</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="field"><label for="channel-name">Название канала</label><input class="control" id="channel-name" name="channel-name" type="text" value="" required maxlength="35" pattern="[А-Яа-яЁёA-Za-z0-9_-]+" placeholder="новый-проект"></div><small>Буквы, цифры, дефис и подчёркивание.</small><button class="btn btn-block" type="submit">Создать канал</button></form></dialog>
-<dialog id="info-dialog" class="dialog"><div class="dialog-title"><h2>Connectify</h2><button type="button" class="icon-btn " aria-label="Закрыть окно" data-tooltip="Закрыть окно" data-dialog-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p data-info-text></p><button class="btn" type="button" data-dialog-close>Понятно</button></dialog>
-<div class="context-menu" data-context-menu hidden><button type="button" data-context-action="copy">Скопировать текст</button><button type="button" data-context-action="edit">Редактировать своё сообщение</button><button class="danger" type="button" data-context-action="delete">Удалить своё сообщение</button></div><div class="toast" role="status" aria-live="polite" hidden></div>
-<noscript><p class="noscript">Для отправки сообщений, поиска и сохранения настроек включите JavaScript.</p></noscript>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Connectify: корпоративный мессенджер для командного общения."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Поиск | Connectify</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/InterVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/design.css" />
+    <script src="js/theme.js"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body
+    data-version="1"
+    data-storage="connectify-artur"
+    data-own="Галкин Артур"
+    data-email="galkin@north.team"
+    data-colleague="Илья Ковалёв"
+    data-second="Мария Лебедева"
+    data-default-channel="дизайн"
+    data-default-workspace="Studio North"
+  >
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <!-- Static page content remains available when JavaScript is disabled. -->
+    <div class="app" data-page="search">
+      <aside class="sidebar" id="sidebar" aria-label="Рабочее пространство">
+        <a class="brand" href="channel.html" aria-label="Connectify на главную"
+          ><span class="brand-icon"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M4.79167 11.0208L9.58333 6.22917L13.4167 10.0625L18.2083 5.27083M4.79167 17.7292L9.58333 12.9375L13.4167 16.7708L18.2083 11.9792"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+                <path
+                  d="M5.75 11.0208C5.75 11.5501 5.32094 11.9792 4.79167 11.9792C4.26239 11.9792 3.83333 11.5501 3.83333 11.0208C3.83333 10.4916 4.26239 10.0625 4.79167 10.0625C5.32094 10.0625 5.75 10.4916 5.75 11.0208Z"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+                <path
+                  d="M19.1667 11.9792C19.1667 12.5084 18.7376 12.9375 18.2083 12.9375C17.6791 12.9375 17.25 12.5084 17.25 11.9792C17.25 11.4499 17.6791 11.0208 18.2083 11.0208C18.7376 11.0208 19.1667 11.4499 19.1667 11.9792Z"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg> </span
+          >Connectify</a
+        ><button
+          type="button"
+          class="icon-btn sidebar-close"
+          aria-label="Закрыть меню"
+          data-tooltip="Закрыть меню"
+          data-menu-close
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <a class="workspace" href="onboarding.html"
+          ><span>N</span
+          ><span
+            ><strong data-workspace>Studio North</strong
+            ><small>Рабочее пространство</small></span
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M4.66667 6.66667L8 10L11.3333 6.66667"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+        </a>
+        <a class="sidebar-search" href="search.html"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M11.3333 11.3333L14.5208 14.5208"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+          <span>Найти в Studio North</span><kbd>⌘ K</kbd></a
+        >
+        <nav class="side-scroll" aria-label="Навигация">
+          <a class="side-link" href="notifications.html"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+            Уведомления<span class="badge" data-unread-count>3</span></a
+          >
+          <div class="nav-heading">
+            КАНАЛЫ<button
+              type="button"
+              class="icon-btn"
+              aria-label="Добавить канал"
+              data-tooltip="Добавить канал"
+              data-add-channel
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                preserveAspectRatio="none"
+                overflow="visible"
+                style="display: block"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <a
+            href="channel.html?channel=общее"
+            class="side-link"
+            data-channel="общее"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+            <span>общее</span></a
+          ><a
+            href="channel.html?channel=дизайн"
+            class="side-link"
+            data-channel="дизайн"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+            <span>дизайн</span><span class="badge">2</span></a
+          ><a
+            href="channel.html?channel=разработка"
+            class="side-link"
+            data-channel="разработка"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+            <span>разработка</span></a
+          ><a
+            href="channel.html?channel=релизы"
+            class="side-link"
+            data-channel="релизы"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+            <span>релизы</span></a
+          >
+          <div class="nav-heading">
+            ЛИЧНЫЕ СООБЩЕНИЯ<a
+              class="icon-btn"
+              href="search.html?tab=people"
+              aria-label="Найти коллегу"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                preserveAspectRatio="none"
+                overflow="visible"
+                style="display: block"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M8 3.33333V8M8 8V12.6667M8 8H3.33333M8 8H12.6667"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <a class="side-link" href="dm.html?person=0"
+            ><span class="avatar avatar-28 avatar-blue"
+              >ИК<i
+                role="img"
+                class="status status-online"
+                aria-label="online"
+              ></i></span
+            ><span>Илья Ковалёв</span></a
+          ><a class="side-link" href="dm.html?person=1"
+            ><span class="avatar avatar-28 avatar-purple"
+              >МЛ<i
+                role="img"
+                class="status status-away"
+                aria-label="away"
+              ></i></span
+            ><span>Мария Лебедева</span></a
+          ><a class="side-link" href="dm.html?person=2"
+            ><span class="avatar avatar-28 avatar-orange"
+              >ДВ<i
+                role="img"
+                class="status status-dnd"
+                aria-label="dnd"
+              ></i></span
+            ><span>Денис Волков</span></a
+          ><a class="side-link" href="dm.html?person=3"
+            ><span class="avatar avatar-28 avatar-pink"
+              >ОН<i
+                role="img"
+                class="status status-invisible"
+                aria-label="invisible"
+              ></i></span
+            ><span>Ольга Никитина</span></a
+          >
+        </nav>
+        <a class="side-user" href="profile-edit.html"
+          ><span class="avatar avatar-36" data-own-avatar
+            >ГА<i
+              role="img"
+              class="status status-online"
+              aria-label="online"
+            ></i></span
+          ><span
+            ><strong data-own-name>Галкин Артур</strong
+            ><small data-own-status>В сети</small></span
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+        </a>
+      </aside>
+      <button
+        class="backdrop"
+        type="button"
+        aria-label="Закрыть меню"
+        data-menu-close
+      ></button>
+      <main class="main" id="main">
+        <header class="page-header">
+          <button
+            type="button"
+            class="icon-btn burger"
+            aria-label="Открыть меню"
+            data-tooltip="Открыть меню"
+            data-menu-open
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div class="header-tile">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="none"
+              overflow="visible"
+              style="display: block"
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+                <path
+                  d="M11.3333 11.3333L14.5208 14.5208"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+          <div><h1 data-page-title>Поиск</h1></div>
+          <div class="header-actions">
+            <button
+              type="button"
+              class="icon-btn theme-toggle"
+              aria-label="Переключить тему"
+              data-tooltip="Переключить тему"
+              data-theme-toggle
+              aria-pressed="false"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11Z" />
+              </svg></button
+            ><button
+              type="button"
+              class="icon-btn"
+              aria-label="Действия страницы"
+              data-tooltip="Действия страницы"
+              data-page-actions
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                preserveAspectRatio="none"
+                overflow="visible"
+                style="display: block"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M4.5 9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9C3 8.58579 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 8.58579 4.5 9Z"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M9.75 9C9.75 9.41421 9.41421 9.75 9 9.75C8.58579 9.75 8.25 9.41421 8.25 9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9Z"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M15 9C15 9.41421 14.6642 9.75 14.25 9.75C13.8358 9.75 13.5 9.41421 13.5 9C13.5 8.58579 13.8358 8.25 14.25 8.25C14.6642 8.25 15 8.58579 15 9Z"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div class="page-body">
+          <div class="content-width">
+            <h2>Поиск в Studio North</h2>
+            <p class="lead">
+              Находите сообщения, файлы и коллег в одном месте.
+            </p>
+            <form class="search-form" role="search" data-search-form>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                preserveAspectRatio="none"
+                overflow="visible"
+                style="display: block"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M11.3333 11.3333L14.5208 14.5208"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                </g>
+              </svg>
+              <label class="sr-only" for="query">Поисковый запрос</label
+              ><input
+                class="control"
+                type="search"
+                id="query"
+                name="q"
+                value="поиск"
+                placeholder="Поиск по рабочему пространству"
+                autocomplete="off"
+              /><button
+                type="button"
+                class="icon-btn"
+                aria-label="Очистить поиск"
+                data-tooltip="Очистить поиск"
+                data-search-clear
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="m6 6 12 12M18 6 6 18" />
+                </svg>
+              </button>
+            </form>
+            <div class="tabs" role="tablist" aria-label="Тип результатов">
+              <button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="search-results"
+                data-search-tab="messages"
+              >
+                Сообщения<span class="badge" data-result-count="messages"
+                  >3</span
+                ></button
+              ><button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="search-results"
+                data-search-tab="files"
+              >
+                Файлы<span class="badge" data-result-count="files"
+                  >1</span
+                ></button
+              ><button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="search-results"
+                data-search-tab="people"
+              >
+                Люди<span class="badge" data-result-count="people"
+                  >1</span
+                ></button
+              ><button
+                class="tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="search-results"
+                data-search-tab="channels"
+              >
+                Каналы<span class="badge" data-result-count="channels">1</span>
+              </button>
+            </div>
+            <div class="search-summary">
+              <span data-search-summary aria-live="polite">3 сообщения</span
+              ><label
+                >Порядок
+                <select
+                  class="sort-select"
+                  data-search-sort
+                  aria-label="Сортировка результатов"
+                >
+                  <option value="new">Сначала новые</option>
+                  <option value="old">Сначала старые</option>
+                </select></label
+              >
+            </div>
+            <div
+              class="search-results"
+              id="search-results"
+              role="tabpanel"
+            ></div>
+            <div class="empty-state" data-search-empty hidden>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                preserveAspectRatio="none"
+                overflow="visible"
+                style="display: block"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M11.3333 11.3333L14.5208 14.5208"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="currentColor"
+                  />
+                </g>
+              </svg>
+              <h2>Ничего не найдено</h2>
+              <p class="muted">
+                Попробуйте другой запрос или выберите другой раздел.
+              </p>
+              <button class="btn btn-secondary" type="button" data-search-clear>
+                Сбросить поиск
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav class="mobile-tabs" aria-label="Основные разделы">
+        <a href="channel.html" class=""
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M9.16667 3.66667L8.16406 8.25M8.16406 8.25L6.96094 13.75M8.16406 8.25H4.125M8.16406 8.25H15.0391M6.96094 13.75L5.95833 18.3333M6.96094 13.75H3.20833M6.96094 13.75H13.8359M16.0417 3.66667L15.0391 8.25M15.0391 8.25L13.8359 13.75M15.0391 8.25H18.7917M13.8359 13.75L12.8333 18.3333M13.8359 13.75H17.875"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+          <span>Каналы</span></a
+        ><a href="dm.html" class=""
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M12.5 7.1875C12.5 8.51358 11.9732 9.78535 11.0355 10.723C10.0979 11.6607 8.82608 12.1875 7.5 12.1875C6.72245 12.1875 5.95437 12.0168 5.25 11.6875L2.5 12.5L3.3125 9.875C2.88616 9.22146 2.6187 8.47721 2.53151 7.70179C2.44432 6.92637 2.53983 6.14131 2.81039 5.40942C3.08095 4.67752 3.51906 4.01911 4.08966 3.48685C4.66026 2.9546 5.34751 2.56329 6.09644 2.34421C6.84536 2.12514 7.63516 2.08439 8.40265 2.22523C9.17014 2.36607 9.89402 2.68458 10.5164 3.15529C11.1387 3.62599 11.6422 4.23583 11.9867 4.93599C12.3311 5.63616 12.5069 6.40723 12.5 7.1875Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M5.625 7.1875H9.375"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+          <span>Сообщения</span></a
+        ><a href="search.html" class="active" aria-current="page"
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M12.0417 7.4375C12.0417 9.98031 9.98031 12.0417 7.4375 12.0417C4.89469 12.0417 2.83333 9.98031 2.83333 7.4375C2.83333 4.89469 4.89469 2.83333 7.4375 2.83333C9.98031 2.83333 12.0417 4.89469 12.0417 7.4375Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+              <path
+                d="M11.3333 11.3333L14.5208 14.5208"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+          <span>Поиск</span></a
+        ><a href="notifications.html" class=""
+          ><svg
+            aria-hidden="true"
+            focusable="false"
+            preserveAspectRatio="none"
+            overflow="visible"
+            style="display: block"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M7.5 15C7.5 15.3978 7.65804 15.7794 7.93934 16.0607C8.22064 16.342 8.60218 16.5 9 16.5C9.39782 16.5 9.77936 16.342 10.0607 16.0607C10.342 15.7794 10.5 15.3978 10.5 15M13.5 6C13.5 4.80653 13.0259 3.66193 12.182 2.81802C11.3381 1.97411 10.1935 1.5 9 1.5C7.80653 1.5 6.66193 1.97411 5.81802 2.81802C4.97411 3.66193 4.5 4.80653 4.5 6C4.5 11.25 2.25 11.25 2.25 12.75H15.75C15.75 11.25 13.5 11.25 13.5 6Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="currentColor"
+              />
+            </g>
+          </svg>
+          <span>Активность</span></a
+        ><a href="profile-edit.html" class=""
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="8" r="4" />
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" /></svg
+          ><span>Профиль</span></a
+        >
+      </nav>
+    </div>
+    <dialog id="recovery-dialog" class="dialog">
+      <form data-recovery-form>
+        <div class="dialog-title">
+          <h2>Восстановить пароль</h2>
+          <button
+            type="button"
+            class="icon-btn"
+            aria-label="Закрыть окно"
+            data-tooltip="Закрыть окно"
+            data-dialog-close
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <p class="lead">Введите email вашего аккаунта.</p>
+        <div class="field">
+          <label for="recovery-email">Email</label
+          ><input
+            class="control"
+            id="recovery-email"
+            name="recovery-email"
+            type="email"
+            value=""
+            required
+            autocomplete="email"
+          />
+        </div>
+        <p class="form-error" data-recovery-error role="alert" hidden></p>
+        <p class="recovery-result" hidden>
+          Это учебная версия без почтового сервера. Для входа используйте
+          демонстрационные данные на странице входа.
+        </p>
+        <button class="btn btn-block" type="submit">Продолжить</button>
+      </form>
+    </dialog>
+    <dialog id="channel-dialog" class="dialog">
+      <form data-channel-form>
+        <div class="dialog-title">
+          <h2>Новый канал</h2>
+          <button
+            type="button"
+            class="icon-btn"
+            aria-label="Закрыть окно"
+            data-tooltip="Закрыть окно"
+            data-dialog-close
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <div class="field">
+          <label for="channel-name">Название канала</label
+          ><input
+            class="control"
+            id="channel-name"
+            name="channel-name"
+            type="text"
+            value=""
+            required
+            maxlength="35"
+            pattern="[А-Яа-яЁёA-Za-z0-9_-]+"
+            placeholder="новый-проект"
+          />
+        </div>
+        <small>Буквы, цифры, дефис и подчёркивание.</small
+        ><button class="btn btn-block" type="submit">Создать канал</button>
+      </form>
+    </dialog>
+    <dialog id="info-dialog" class="dialog">
+      <div class="dialog-title">
+        <h2>Connectify</h2>
+        <button
+          type="button"
+          class="icon-btn"
+          aria-label="Закрыть окно"
+          data-tooltip="Закрыть окно"
+          data-dialog-close
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <p data-info-text></p>
+      <button class="btn" type="button" data-dialog-close>Понятно</button>
+    </dialog>
+    <div class="context-menu" data-context-menu hidden>
+      <button type="button" data-context-action="copy">Скопировать текст</button
+      ><button type="button" data-context-action="edit">
+        Редактировать своё сообщение</button
+      ><button class="danger" type="button" data-context-action="delete">
+        Удалить своё сообщение
+      </button>
+    </div>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <noscript
+      ><p class="noscript">
+        Для отправки сообщений, поиска и сохранения настроек включите
+        JavaScript.
+      </p></noscript
+    >
+  </body>
 </html>
